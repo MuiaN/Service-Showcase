@@ -1,6 +1,7 @@
 import {
   Globe, Palette, CreditCard, FileImage,
-  Heart, Baby, Cake, Layers
+  Heart, Baby, Cake, Layers,
+  ImagePlay, Users, TrendingUp, Megaphone
 } from "lucide-react";
 
 export const servicesData = [
@@ -94,7 +95,7 @@ export interface PricingTab {
 
 import type React from "react";
 
-export const detailedPricingData: Record<"web" | "events", PricingTab> = {
+export const detailedPricingData: Record<"web" | "events" | "social", PricingTab> = {
   web: {
     categories: [
       {
@@ -600,6 +601,262 @@ export const detailedPricingData: Record<"web" | "events", PricingTab> = {
               "Animated version (GIF/MP4) for one design",
               "Full source files delivered",
               "Priority turnaround"
+            ],
+            popular: false
+          }
+        ]
+      }
+    ]
+  },
+  social: {
+    categories: [
+      {
+        id: "content-creation",
+        label: "Content Creation",
+        icon: ImagePlay,
+        color: "text-fuchsia-400",
+        note: "We design scroll-stopping graphics, carousels, stories and reels covers tailored to your brand. Delivered as ready-to-post digital files each month.",
+        plans: [
+          {
+            title: "Starter",
+            price: 150,
+            description: "Essential monthly content to keep your feed active and on-brand.",
+            delivery: "First batch within 5 business days",
+            features: [
+              "12 custom feed posts/month",
+              "8 story graphics/month",
+              "1 platform (Instagram or Facebook)",
+              "Brand-consistent templates",
+              "Captions provided",
+              "2 rounds of revisions/month",
+              "Monthly content calendar",
+              "PNG + optimised web files"
+            ],
+            popular: false
+          },
+          {
+            title: "Growth",
+            price: 300,
+            description: "A steady stream of diverse content across multiple platforms.",
+            delivery: "Content delivered weekly in batches",
+            features: [
+              "24 custom feed posts/month",
+              "16 story + highlight covers/month",
+              "2 platforms (e.g. Instagram + Facebook)",
+              "Carousel / multi-image posts",
+              "Reels cover graphics",
+              "Branded caption copy",
+              "4 rounds of revisions/month",
+              "Monthly content calendar",
+              "All platform-optimised sizes"
+            ],
+            popular: true
+          },
+          {
+            title: "Pro",
+            price: 500,
+            description: "Maximum-output content production for brands serious about growth.",
+            delivery: "Delivered on a rolling weekly schedule",
+            features: [
+              "40+ custom pieces/month",
+              "Stories, carousels, reels covers & banners",
+              "Up to 4 platforms",
+              "Custom branded templates (not shared)",
+              "Full caption copywriting",
+              "Unlimited revisions",
+              "Monthly content calendar + strategy notes",
+              "Priority 24-hr turnaround on revisions",
+              "All source files delivered",
+              "Quarterly brand refresh"
+            ],
+            popular: false
+          }
+        ]
+      },
+      {
+        id: "account-management",
+        label: "Account Management",
+        icon: Users,
+        color: "text-sky-400",
+        note: "We handle your day-to-day social media presence — posting, engaging and growing your community so you can focus on running your business.",
+        plans: [
+          {
+            title: "Starter",
+            price: 150,
+            description: "Hands-off posting and basic community care for one platform.",
+            delivery: "Onboarding within 3 business days",
+            features: [
+              "1 platform managed",
+              "3 posts per week (scheduled)",
+              "Comment moderation & replies",
+              "Basic follower engagement",
+              "Monthly performance summary",
+              "Bio & profile optimisation",
+              "Content sourced from your brand kit"
+            ],
+            popular: false
+          },
+          {
+            title: "Growth",
+            price: 300,
+            description: "Active community management across two platforms with reporting.",
+            delivery: "Onboarding within 3 business days",
+            features: [
+              "2 platforms managed",
+              "5 posts per week (scheduled)",
+              "Daily comment & DM monitoring",
+              "Active follower engagement",
+              "Hashtag strategy",
+              "Story posting (3×/week)",
+              "Bi-weekly performance report",
+              "Profile + highlights optimisation",
+              "Competitor account tracking"
+            ],
+            popular: true
+          },
+          {
+            title: "Pro",
+            price: 500,
+            description: "Full-service account management across all your platforms.",
+            delivery: "Onboarding within 2 business days",
+            features: [
+              "Up to 4 platforms managed",
+              "Daily posting (7 days/week)",
+              "24-hr comment & DM response",
+              "Proactive community growth tactics",
+              "Hashtag & keyword research",
+              "Stories + reels scheduling",
+              "Weekly performance report",
+              "Influencer outreach (micro-tier)",
+              "Monthly strategy call",
+              "Competitor & trend analysis"
+            ],
+            popular: false
+          }
+        ]
+      },
+      {
+        id: "strategy-analytics",
+        label: "Strategy & Analytics",
+        icon: TrendingUp,
+        color: "text-emerald-400",
+        note: "Data-driven strategies and clear monthly reports that show exactly how your social channels are performing and what to do next.",
+        plans: [
+          {
+            title: "Starter",
+            price: 150,
+            description: "A focused monthly strategy session and core metrics overview.",
+            delivery: "First report within 7 days of onboarding",
+            features: [
+              "1 platform audited",
+              "Monthly analytics report (reach, engagement, growth)",
+              "Content performance breakdown",
+              "3 actionable monthly recommendations",
+              "Hashtag performance review",
+              "Best-time-to-post analysis",
+              "Email delivery of all reports"
+            ],
+            popular: false
+          },
+          {
+            title: "Growth",
+            price: 300,
+            description: "Multi-platform analytics with a monthly content strategy plan.",
+            delivery: "Reports delivered by the 5th of each month",
+            features: [
+              "Up to 3 platforms tracked",
+              "Bi-weekly performance reports",
+              "Audience demographics deep-dive",
+              "Top-post & worst-post analysis",
+              "Competitor benchmarking (3 accounts)",
+              "Monthly content strategy doc",
+              "Posting schedule optimisation",
+              "Hashtag strategy refresh",
+              "30-min monthly strategy call"
+            ],
+            popular: true
+          },
+          {
+            title: "Pro",
+            price: 500,
+            description: "Executive-level social intelligence across all your channels.",
+            delivery: "Weekly snapshots + full monthly report",
+            features: [
+              "All platforms tracked (unlimited)",
+              "Weekly performance snapshots",
+              "Full monthly analytics report",
+              "Conversion & link-click tracking",
+              "Audience growth modelling",
+              "Competitor benchmarking (10 accounts)",
+              "Paid + organic combined view",
+              "Content ROI analysis",
+              "Custom KPI dashboard",
+              "60-min strategy & planning call/month",
+              "Priority Slack/email support"
+            ],
+            popular: false
+          }
+        ]
+      },
+      {
+        id: "paid-campaigns",
+        label: "Paid Campaigns",
+        icon: Megaphone,
+        color: "text-amber-400",
+        note: "Ad creative design and campaign setup for boosted posts and paid social ads. Ad spend budget is separate and paid directly to the platform by you.",
+        plans: [
+          {
+            title: "Boost",
+            price: 150,
+            description: "Essential ad creative and campaign setup for a single platform.",
+            delivery: "Campaign live within 5 business days",
+            features: [
+              "2 ad creatives designed",
+              "1 platform (Instagram or Facebook)",
+              "1 campaign objective",
+              "Audience targeting setup",
+              "Ad copy (2 variations)",
+              "Campaign monitoring",
+              "End-of-campaign summary report",
+              "Ad spend not included"
+            ],
+            popular: false
+          },
+          {
+            title: "Campaign",
+            price: 300,
+            description: "A full multi-ad campaign with A/B testing and weekly reporting.",
+            delivery: "Campaign live within 4 business days",
+            features: [
+              "6 ad creatives designed",
+              "2 platforms (Facebook + Instagram)",
+              "A/B split testing setup",
+              "Custom audience + lookalike targeting",
+              "Retargeting campaign",
+              "Ad copy (4 variations)",
+              "Weekly performance reports",
+              "Mid-campaign budget optimisation",
+              "Ad spend not included"
+            ],
+            popular: true
+          },
+          {
+            title: "Full-Funnel",
+            price: 500,
+            description: "End-to-end paid social strategy across multiple platforms and funnel stages.",
+            delivery: "Campaign live within 3 business days",
+            features: [
+              "12+ ad creatives per month",
+              "Up to 4 platforms (FB, IG, TikTok, LinkedIn)",
+              "Full funnel: awareness → retargeting → conversion",
+              "Multi-audience segmentation",
+              "Dynamic ad setup",
+              "Unlimited A/B tests",
+              "Daily campaign monitoring",
+              "Weekly reports + monthly deep-dive",
+              "Landing page review & recommendations",
+              "Dedicated ads manager",
+              "Ad spend not included"
             ],
             popular: false
           }

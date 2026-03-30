@@ -3,16 +3,18 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Check, Clock, Download, Sparkles } from "lucide-react";
 import { detailedPricingData, type ServiceCategory } from "@/lib/data";
 
-type Tab = "web" | "events";
+type Tab = "web" | "events" | "social";
 
 function PricingCard({
   plan,
   index,
   color,
+  billing,
 }: {
   plan: ServiceCategory["plans"][number];
   index: number;
   color: string;
+  billing: "project" | "month";
 }) {
   return (
     <motion.div
@@ -45,7 +47,7 @@ function PricingCard({
         <span className="text-4xl font-display font-extrabold text-white">
           ${plan.price.toLocaleString()}
         </span>
-        <span className="text-muted-foreground text-sm">/project</span>
+        <span className="text-muted-foreground text-sm">/{billing}</span>
       </div>
 
       {/* Delivery badge */}
@@ -146,11 +148,11 @@ export function Pricing() {
           className="flex justify-center mb-10"
         >
           <div className="inline-flex items-center p-1.5 rounded-full bg-white/5 border border-white/10">
-            {(["web", "events"] as Tab[]).map((tab) => (
+            {(["web", "events", "social"] as Tab[]).map((tab) => (
               <button
                 key={tab}
                 onClick={() => handleTabSwitch(tab)}
-                className="relative px-8 py-3 rounded-full text-sm font-semibold transition-colors duration-300"
+                className="relative px-6 py-3 rounded-full text-sm font-semibold transition-colors duration-300"
               >
                 {activeTab === tab && (
                   <motion.div
@@ -166,7 +168,7 @@ export function Pricing() {
                       : "text-muted-foreground hover:text-white"
                   }`}
                 >
-                  {tab === "web" ? "Web & Branding" : "Event Services"}
+                  {tab === "web" ? "Web & Branding" : tab === "events" ? "Event Services" : "Social Media"}
                 </span>
               </button>
             ))}
@@ -242,6 +244,7 @@ export function Pricing() {
                 plan={plan}
                 index={i}
                 color={activeCategory.color}
+                billing={activeTab === "social" ? "month" : "project"}
               />
             ))}
           </motion.div>
