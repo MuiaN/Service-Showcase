@@ -29,13 +29,14 @@ export function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         <div 
-          className="text-2xl font-display font-bold text-gradient cursor-pointer flex items-center gap-2"
+          className="cursor-pointer flex items-center"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-fuchsia-500 flex items-center justify-center shadow-lg shadow-primary/20">
-            <span className="text-white text-sm">CS</span>
-          </div>
-          CreativeStudio
+          <img 
+            src="/creativestudios.png" 
+            alt="Creative Studio" 
+            className="h-10 md:h-12 w-auto object-contain transition-transform hover:scale-105"
+          />
         </div>
 
         <nav className="hidden md:flex items-center gap-8">

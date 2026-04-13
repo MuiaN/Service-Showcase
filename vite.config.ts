@@ -32,14 +32,14 @@ export default defineConfig(({ mode }) => {
                     port: parseInt(env.SMTP_PORT || "465"),
                     secure: true,
                     auth: {
-                      user: env.SMTP_USER || "info@tytantech.co.ke",
+                      user: env.SMTP_USER || "creativestudio@tytantech.co.ke",
                       pass: env.SMTP_PASSWORD,
                     },
                   });
 
                   await transporter.sendMail({
-                    from: env.SMTP_USER || "info@tytantech.co.ke",
-                    to: "info@tytantech.co.ke",
+                    from: env.SMTP_USER || "creativestudio@tytantech.co.ke",
+                    to: "creativestudio@tytantech.co.ke",
                     subject: `New Quote Request from ${name} (${subService || service})`,
                     html: `
                       <div style="font-family: sans-serif; line-height: 1.6; color: #333;">

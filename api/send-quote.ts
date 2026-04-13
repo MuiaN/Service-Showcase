@@ -21,15 +21,15 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       port: parseInt(process.env.SMTP_PORT || '465', 10),
       secure: true, // Port 465 is secure
       auth: {
-        user: process.env.SMTP_USER || 'info@tytantech.co.ke',
+        user: process.env.SMTP_USER || 'creativestudio@tytantech.co.ke',
         pass: process.env.SMTP_PASSWORD, // Set this in Vercel Environment Variables
       },
     });
 
     // Construct email content
     const mailOptions = {
-      from: process.env.SMTP_USER || 'info@tytantech.co.ke',
-      to: 'info@tytantech.co.ke',
+      from: process.env.SMTP_USER || 'creativestudio@tytantech.co.ke',
+      to: 'creativestudio@tytantech.co.ke',
       replyTo: email,
       subject: `New Quote Request from ${name} (${subService || service})`,
       html: `

@@ -24,13 +24,13 @@ function QuoteDialog({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
 
     try {
       // This represents an API call to a backend that uses your SMTP settings:
-      // Host: mail.tytantech.co.ke | Port: 465 | User: info@tytantech.co.ke
+      // Host: mail.tytantech.co.ke | Port: 465 | User: creativestudio@tytantech.co.ke
       const response = await fetch('/api/send-quote', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
           ...data, 
-          recipient: 'info@tytantech.co.ke',
+          recipient: 'creativestudio@tytantech.co.ke',
           subject: `New Quote Request from ${data.name}`
         }),
       });
@@ -234,16 +234,28 @@ export function Footer() {
         <div className="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent my-8" />
         
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded bg-gradient-to-br from-primary to-fuchsia-500 flex items-center justify-center">
-              <span className="text-white text-[10px] font-bold">CS</span>
-            </div>
-            <span className="font-display font-semibold text-lg">CreativeStudio</span>
+          <div className="flex items-center">
+            <img 
+              src="/creativestudios.png" 
+              alt="Creative Studio" 
+              className="h-10 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
+            />
           </div>
           
-          <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} CreativeStudio. All rights reserved.
-          </p>
+          <div className="flex flex-col items-center gap-2">
+            <p className="text-muted-foreground text-sm">
+              © {new Date().getFullYear()} Creative Studio. All rights reserved.
+            </p>
+            <a 
+              href="https://tytantech.co.ke" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-[11px] uppercase tracking-wider text-muted-foreground/40 hover:text-primary hover:underline underline-offset-4 transition-all flex items-center gap-1 group"
+            >
+              Powered by <span className="font-bold text-muted-foreground/60 group-hover:text-primary transition-colors">Tytan Tech</span>
+              <ArrowUpRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </a>
+          </div>
           
           <div className="flex items-center gap-4 text-muted-foreground">
             <a href="#" className="hover:text-white transition-colors p-2 rounded-full hover:bg-white/5"><Instagram className="w-5 h-5" /></a>
