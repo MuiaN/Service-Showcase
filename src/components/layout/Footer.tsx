@@ -252,7 +252,7 @@ export function Footer() {
               rel="noopener noreferrer"
               className="text-[11px] uppercase tracking-wider text-muted-foreground/40 hover:text-primary hover:underline underline-offset-4 transition-all flex items-center gap-1 group"
             >
-              Powered by <span className="font-bold text-muted-foreground/60 group-hover:text-primary transition-colors">Tytan Tech</span>
+              Powered by <span className="font-bold text-muted-foreground group-hover:text-primary transition-colors">Tytan Tech</span>
               <ArrowUpRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
           </div>
