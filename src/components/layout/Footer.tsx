@@ -258,7 +258,7 @@ export function Footer() {
           </div>
           
           <div className="flex items-center gap-3">
-            <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground/30 font-bold">Affiliated with</span>
+            <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground font-bold">Affiliated with</span>
             <a 
               href="https://www.tytantech.co.ke/" 
               target="_blank" 
