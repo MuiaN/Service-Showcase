@@ -79,7 +79,7 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 1 }}
-        className="absolute bottom-[20px] left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground/60"
+        className="absolute bottom-[01px] left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground/60"
       >
         <span className="text-xs font-medium uppercase tracking-widest">
           Scroll
