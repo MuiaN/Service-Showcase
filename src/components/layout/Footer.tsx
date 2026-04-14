@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Mail, Instagram, Twitter, Facebook, ArrowUpRight, X, Send, CheckCircle2 } from "lucide-react";
+import { Mail, ArrowUpRight, X, Send, CheckCircle2 } from "lucide-react";
 
 function QuoteDialog({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -257,10 +257,20 @@ export function Footer() {
             </a>
           </div>
           
-          <div className="flex items-center gap-4 text-muted-foreground">
-            <a href="#" className="hover:text-white transition-colors p-2 rounded-full hover:bg-white/5"><Instagram className="w-5 h-5" /></a>
-            <a href="#" className="hover:text-white transition-colors p-2 rounded-full hover:bg-white/5"><Twitter className="w-5 h-5" /></a>
-            <a href="#" className="hover:text-white transition-colors p-2 rounded-full hover:bg-white/5"><Facebook className="w-5 h-5" /></a>
+          <div className="flex items-center gap-3">
+            <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground/30 font-bold">Affiliated with</span>
+            <a 
+              href="https://www.tytantech.co.ke/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="transition-all hover:opacity-80 active:scale-95"
+            >
+              <img 
+                src="/LOGO-02.png" 
+                alt="Tytan Tech" 
+                className="h-7 md:h-8 w-auto object-contain"
+              />
+            </a>
           </div>
         </div>
       </div>
